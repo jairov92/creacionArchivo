@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Universidad>
+  <Estudiante>
+    <Nombre>w</Nombre>
+    <Telefono>w</Telefono>
+    <Codigo>w</Codigo>
+    <Carrera>w</Carrera>
+  </Estudiante>
+  <Estudiante>
+    <Nombre>e</Nombre>
+    <Telefono>e</Telefono>
+    <Codigo>e</Codigo>
+    <Carrera>e</Carrera>
+  </Estudiante>
+</Universidad>

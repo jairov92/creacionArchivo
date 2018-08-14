@@ -9,6 +9,10 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 /**
  *
@@ -95,6 +99,33 @@ public class Estudiante extends Persona {
             }
         }
 
+        return g;
+    }
+
+    public boolean creacionArchivoXML(LinkedList<Estudiante> listaE) {
+        boolean g=false;
+        try {
+            Element Universidad = new Element("Universidad");
+            Document doc = new Document(Universidad);
+            for (int i = 0; i <listaE.size(); i++) {
+                Element Estudiante = new Element("Estudiante");
+                Estudiante.addContent(new Element("Nombre").setText(
+                        listaE.get(i).getNombre()));
+                 Estudiante.addContent(new Element("Telefono").setText(
+                        listaE.get(i).getTelefono()));
+                   Estudiante.addContent(new Element("Codigo").setText(
+                        listaE.get(i).getCodigo()));
+                     Estudiante.addContent(new Element("Carrera").setText(
+                        listaE.get(i).getTelefono()));
+                     doc.getRootElement().addContent(Estudiante);
+                
+            }
+            XMLOutputter xmlOutput = new XMLOutputter();
+            xmlOutput.setFormat(Format.getPrettyFormat());
+            xmlOutput.output(doc, new FileWriter("Universidad.xml"));
+        }catch (Exception e){
+        }
+        
         return g;
     }
 

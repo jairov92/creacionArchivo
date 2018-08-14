@@ -6,9 +6,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="creacionarchivos.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="482.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="creacionarchivos.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+        <Button layoutX="70.0" layoutY="338.0" onAction="#handleButtonAction" text="Agregar Estudiantes" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="167.0" layoutY="39.0" text="Agregar Estudiantes" />
+      <Button layoutX="281.0" layoutY="338.0" mnemonicParsing="false" onAction="#guardarXML" text="Guardar Archivo xml" />
+      <TextField fx:id="tNombre" layoutX="167.0" layoutY="116.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="tTelefono" layoutX="167.0" layoutY="152.0" />
+      <TextField fx:id="tCorreo" layoutX="167.0" layoutY="194.0" />
+      <Label layoutX="70.0" layoutY="120.0" text="Nombre" />
+      <Label layoutX="73.0" layoutY="198.0" text="Correo" />
+      <Label layoutX="68.0" layoutY="156.0" text="Telefono" />
+      <TextField fx:id="tCodigo" layoutX="167.0" layoutY="235.0" />
+      <Label layoutX="72.0" layoutY="239.0" text="Codigo" />
+      <Label layoutX="72.0" layoutY="284.0" text="Carrera" />
+      <TextField fx:id="tCarrera" layoutX="167.0" layoutY="272.0" />
     </children>
 </AnchorPane>
